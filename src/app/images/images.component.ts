@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-images',
-  templateUrl: './images.component.html',
-  styleUrls: ['./images.component.css']
+	selector: 'app-images',
+	templateUrl: './images.component.html'
 })
-export class ImagesComponent implements OnInit {
+export class ImagesComponent implements OnInit
+{
+	constructor() { }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+	ngOnInit()
+	{
+	}
 }
