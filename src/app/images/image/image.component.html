@@ -9,13 +9,16 @@
 				<label>
 					Select file to upload
 				</label>
-				<input type="file" accept="image/*" class="form-control" #fileUploader formControlName="imageUrl" (change)="showPreview($event)">
-				<div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This is a required field!</div>
+				<input type="file" accept="image/*" class="form-control" #fileUploader formControlName="imageUrl"
+					(change)="showPreview($event)">
+				<div class="text-danger" *ngIf="isSubmitted && formControls.imageUrl.errors?.required">This is a
+					required field!</div>
 			</div>
 
 			<div class="form-group">
 				<input type="text" class="form-control" formControlName="caption" placeholder="Caption">
-				<div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This is a required field!</div>
+				<div class="text-danger" *ngIf="isSubmitted && formControls.caption.errors?.required">This is a required
+					field!</div>
 			</div>
 
 			<div class="form-group">
@@ -26,8 +29,16 @@
 				</select>
 			</div>
 
-			<div class="form-group">
-				<button type="submit" class="btn btn-success float-right">Submit</button>
+			<div class="form-row">
+				<div class="form-group col-md-6">
+					<a routerLink="/image/list" class="btn btn-primary btn-block float-right">
+						Go to Gallery
+					</a>
+				</div>
+
+				<div class="form-group col-md-6">
+					<button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+				</div>
 			</div>
 		</form>
 	</div>
